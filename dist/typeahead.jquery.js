@@ -1104,7 +1104,7 @@
             },
             _onDatasetCleared: function onDatasetCleared() {
                 this.input.$input.attr("aria-expanded", "false");
-                this.input.$input.removeAttr("aria-activedescendent");
+                this.input.$input.removeAttr("aria-activedescendant");
                 this._updateHint();
             },
             _onDatasetRendered: function onDatasetRendered(type, dataset, suggestions, async) {
@@ -1290,11 +1290,11 @@
                     this.menu.setCursor($candidate);
                     if (data) {
                         this.input.setInputValue(data.val);
-                        this.input.$input.attr("aria-activedescendent", $candidate.attr("id"));
+                        this.input.$input.attr("aria-activedescendant", $candidate.attr("id"));
                     } else {
                         this.input.resetInputValue();
                         this._updateHint();
-                        this.input.$input.removeAttr("aria-activedescendent");
+                        this.input.$input.removeAttr("aria-activedescendant");
                     }
                     this.eventBus.trigger("cursorchange", payload);
                     return true;
