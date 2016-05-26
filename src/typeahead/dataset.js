@@ -195,7 +195,7 @@ var Dataset = (function() {
         .data(keys.val, that.displayFn(suggestion))
         .addClass(that.classes.suggestion + ' ' + that.classes.selectable)
         .attr("role", "option")
-        .attr("id", "ariaitem_" + index);
+        .attr("id", that.$el.attr("id") + "_ariaitem_" + index);
 
         fragment.appendChild($el[0]);
       });
