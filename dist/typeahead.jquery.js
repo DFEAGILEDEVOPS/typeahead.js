@@ -749,7 +749,7 @@
                 _.each(suggestions, function getSuggestionNode(suggestion, index) {
                     var $el, context;
                     context = that._injectQuery(query, suggestion);
-                    $el = $(that.templates.suggestion(context)).data(keys.obj, suggestion).data(keys.val, that.displayFn(suggestion)).addClass(that.classes.suggestion + " " + that.classes.selectable).attr("role", "option").attr("id", "ariaitem_" + index);
+                    $el = $(that.templates.suggestion(context)).data(keys.obj, suggestion).data(keys.val, that.displayFn(suggestion)).addClass(that.classes.suggestion + " " + that.classes.selectable).attr("role", "option").attr("id", that.$el.attr("id") + "_ariaitem_" + index);
                     fragment.appendChild($el[0]);
                 });
                 this.highlight && highlight({
